@@ -1,4 +1,6 @@
-const API_URL = "http://127.0.0.1:8000/api/tickets";
+/*const API_URL = "http://127.0.0.1:8000/api/tickets";*/
+
+const API_URL = "https://sistema-tickets-ti-mal6.onrender.com/api/tickets";
 
 // 1. Obtener tickets cuando la página carga
 document.addEventListener("DOMContentLoaded", fetchTickets);
