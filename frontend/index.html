@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ServiceDesk TI - Panel de Control</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🛠️ ServiceDesk TI</h1>
+            <p>Sistema de Gestión de Tickets y Soporte Corporativo</p>
+        </header>
+
+        <!-- Formulario para levantar un ticket -->
+        <section class="card">
+            <h2>Levantar Nuevo Ticket</h2>
+            <form id="ticketForm">
+                <div class="form-group">
+                    <label for="titulo">Título del Requerimiento:</label>
+                    <input type="text" id="titulo" placeholder="Ej: Falla en impresora de Finanzas" required>
+                </div>
+                <div class="form-group">
+                    <label for="descripcion">Descripción detallada:</label>
+                    <textarea id="descripcion" rows="3" placeholder="Describe el problema o necesidad..." required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="prioridad">Prioridad:</label>
+                    <select id="prioridad">
+                        <option value="BAJA">BAJA</option>
+                        <option value="MEDIA" selected>MEDIA</option>
+                        <option value="ALTA">ALTA</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Crear Ticket</button>
+            </form>
+        </section>
+
+        <!-- Contenedor para la lista de tickets -->
+        <section class="card">
+            <h2>Solicitudes en Sistema</h2>
+            <div id="ticketsContainer" class="tickets-grid">
+                <p class="loading">Cargando requerimientos...</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
