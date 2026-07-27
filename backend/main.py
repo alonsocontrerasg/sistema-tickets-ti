@@ -9,13 +9,6 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent
 DB_PATH = BASE_DIR / "database.db"
 
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],  # Permite peticiones desde cualquier origen (Vercel)
-    allow_credentials=True,
-    allow_methods=["*"],  # Permite GET, POST, PUT, DELETE, etc.
-    allow_headers=["*"],
-)
 
 app = FastAPI(
     title="API ServiceDesk TI - Empresa Demo",
